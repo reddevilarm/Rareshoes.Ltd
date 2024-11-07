@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Rare Shoe Marketplace</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #dbbcc6;
+            color: #333;
+            .banner{
+            background: url('https://media.gucci.com/style/DarkGray_Center_0_0_1200x1200/1659632408/606110_HVK20_9766_003_100_0000_Light-Womens-Gucci-Tennis-1977-sneaker.jpg') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }   
+        }
+        id {
+  scroll-behavior: smooth;
+}
+        header {
+            background-color: #222;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        nav a {
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        .banner {
+            background: url('https://example.com/rare-shoe-banner.jpg') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+        .banner h2 {
+            font-size: 3rem;
+            margin: 0;
+        }
+        .content {
+            padding: 40px;
+            text-align: center;
+        }
+        .content h2 {
+            font-size: 2.5rem;
+        }
+        .content p {
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+        .shoes-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .shoe-item {
+            background-color: #fff;
+            padding: 20px;
+            width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .shoe-item img {
+            width: 100%;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+        .shoe-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+        }
+        .close-btn {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .close-btn:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Rare Shoe Marketplace</h1>
+        <p>Exclusive rare shoes for collectors and enthusiasts</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#about">About us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="purchase.html">Purchase</a>
+    </nav>
+
+    <section class="banner">
+        <h2>Discover Rare & Unique Footwear</h2>
+    </section>
+
+    <section class="content" id="about">
+        <h2>About Us</h2>
+        <p>
+            At Right Step, we believe that every step should make a statement. We are passionate about providing footwear enthusiasts with the rarest, most exclusive shoes that define individuality and style. Whether you're a collector or a trendsetter, Right Step is here to offer you the finest shoes that can’t be found anywhere else.
+    </p>
+        </section>
+
+    <section class="content" id="shoes">
+        <h2>Featured Shoes</h2>
+        <div class="shoes-grid">
+            <div class="shoe-item" onclick="openModal('Air Jordan 1')">
+                <img src=https://sp.yimg.com/ib/th?id=OPAC.kmkVO309PXaWnw474C474&o=5&pid=21.1&w=160&h=105 alt="Air Jordan 1">
+                <h3>Air Jordan 1</h3>
+                <p>An iconic pair that revolutionized basketball footwear.</p>
+            </div>
+            
+            <div class="shoe-item" onclick="openModal('Yeezy Boost 350')">
+                <img src=https://sp.yimg.com/ib/th?id=OPAC.9ojWeNEk2HQfYg474C474&o=5&pid=21.1&w=160&h=105 alt="Yeezy Boost">
+                <h3>Yeezy Boost 350</h3>
+                <p>A staple in sneaker culture with its futuristic design.</p>
+            </div>
+
+            <div class="shoe-item" onclick="openModal('Off-White x Nike')">
+                <img src=https://sp.yimg.com/ib/th?id=OPAC.Oa5vAW%2ffdD0zOg474C474&o=5&pid=21.1&w=160&h=105 alt="Off-White Nike">
+                <h3>Off-White x Nike</h3>
+                <p>Virgil Abloh's deconstructed design masterpiece.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p>Contact us: <a href="mailto:rightstep@gmail.com">rightstep@gmail.com</a></p>
+        <p>&copy; 2024 Rare Shoe Marketplace. All rights reserved.</p>
+    </footer>
+
+   
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h2 id="modal-title"></h2>
+            <p>More details about this rare and iconic shoe will be displayed here. Check back soon for additional information!</p>
+            <button class="close-btn" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <script>
+        function openModal(shoeName) {
+            document.getElementById('modal-title').textContent = shoeName;
+            document.getElementById('modal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+
+        
+        window.onclick = function(event) {
+            var modal = document.getElementById('modal');
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
+
